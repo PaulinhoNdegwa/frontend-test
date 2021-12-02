@@ -8,6 +8,8 @@ import { Product, Category, SoryBy, Hustle } from '../types'
 
 import ProductList from '../components/ProductList'
 
+import SelectBox from '../components/SelectBox';
+
 const Home: NextPage = () => {
   const [hustle, setHustle] = useState<Hustle>()
   const [sortBy, setSortBy] = useState<SoryBy[]>([])
@@ -40,6 +42,10 @@ const Home: NextPage = () => {
           <h3>Loading...</h3>
         ) : null
       }
+      <div>
+        <SelectBox name="Sort By" values={sortBy} />
+        <SelectBox name="Categories" values={categories} />
+      </div>
       <ProductList products={products}/>
     </div>
   )

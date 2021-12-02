@@ -6,6 +6,8 @@ import styles from '../styles/Home.module.css'
 import axios from 'axios'
 import { Product, Category, SoryBy, Hustle } from '../types'
 
+import ProductList from '../components/ProductList'
+
 const Home: NextPage = () => {
   const [hustle, setHustle] = useState<Hustle>()
   const [sortBy, setSortBy] = useState<SoryBy[]>([])
@@ -38,13 +40,7 @@ const Home: NextPage = () => {
           <h3>Loading...</h3>
         ) : null
       }
-      {
-        products && products.map((product, index) => {
-          return (
-            <p key={index}>{product.name}</p>
-          )
-        })
-      }
+      <ProductList products={products}/>
     </div>
   )
 }

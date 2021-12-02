@@ -1,13 +1,13 @@
 export type Hustle = {
-    name: String,
-    shop_logo: String,
-    shop_banner: String
+    name: string,
+    shop_logo: string,
+    shop_banner: string
 }
 export type Product = {
-    name: String,
-    product_image: String,
-    price: String
+    name: string,
+    product_image: string,
+    price: string
 }
-export type Category = String
+export type Category = string
 
-export type SoryBy = String
+export type SoryBy = string

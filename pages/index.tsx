@@ -9,6 +9,7 @@ import { Product, Category, SoryBy, Hustle } from '../types'
 import ProductList from '../components/ProductList'
 
 import SelectBox from '../components/SelectBox';
+import Landing from './Landing'
 
 const Home: NextPage = () => {
   const [hustle, setHustle] = useState<Hustle>()
@@ -29,24 +30,37 @@ const Home: NextPage = () => {
         setLoading(false)
       })
       .catch(err => {
+        console.log(err)
         setFetchError(err.message)
         setLoading(false)
       })
   }, [])
-
   return (
     <div className={styles.container}>
       <h2>Products Page</h2>
       {
-        loading ? (
+        loading && !products.length ? (
           <h3>Loading...</h3>
+        ) : (
+          <div>
+            {
+              hustle ? <Landing hustle={hustle} /> : null
+            }
+            <div>
+              <SelectBox name="Sort By" values={sortBy} />
+              <SelectBox name="Categories" values={categories} />
+            </div>
+            <ProductList products={products} />
+          </div>
+        )
+      }
+
+      {
+        fetchError ? (
+          <div>Error fetching products. Try again later or contact the admin</div>
         ) : null
       }
-      <div>
-        <SelectBox name="Sort By" values={sortBy} />
-        <SelectBox name="Categories" values={categories} />
-      </div>
-      <ProductList products={products}/>
+
     </div>
   )
 }

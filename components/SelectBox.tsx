@@ -6,8 +6,8 @@ interface Props {
 
 const SelectBox = ({name, values}: Props) => {
     return ( 
-        <SelectInput name={name}>
-            <option disabled selected>{name}</option>
+        <SelectInput defaultValue={name}  name={name}>
+            <option disabled value={name}>{name}</option>
             {
                 values.map((value, index) => {
                     return <SelectOption key={index} value={value}>{value}</SelectOption>

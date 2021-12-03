@@ -21,22 +21,51 @@ const ProductCard = ({ product }: Props) => {
 
 const ProductContainer = styled.div`
   text-align: left;
-  width: 30%;
+  width: 360px;
   margin: 20px 0;
+  padding-bottom: 20px;
+  border-radius: 5px;
+
+  @media only screen and (max-width: 1200px){
+    width: 300px;
+    margin: 20px auto;
+  }
+
+  @media only screen and (max-width: 780px){
+    width: 220px;
+    margin: 20px auto;
+  }
+
+  @media only screen and (max-width: 480px){
+    width: 180px;
+    margin: 20px auto;
+  }
 `
 const ProductImage = styled.img`
   width: 100%;
   border-radius: 5px;
   background: #eee;
+
+  @media only screen and (max-width: 780px){
+    height: 175px;
+  }
 `
 const ProductName = styled.p`
   color: #1d1d60;
   font-size: 18px;
+
+  @media only screen and (max-width: 780px){
+    font-size: 14px;
+  }
 `
 
 const ProductPrice = styled.p`
   color: #888;
   font-size: 17px;
+
+  @media only screen and (max-width: 780px){
+    font-size: 13px;
+  }
 `
 
 const ProductActionButtons = styled.div`
@@ -48,7 +77,20 @@ const ProductActionButton = styled.button`
   padding: 6px 15px;
   background: #fff;
   font-size: 16px;
-  border: 1px #888 solid;
+  border: 1px #a7a7a7 solid;
+  color: #414141;
   border-radius: 3px;
+  :hover {
+      background: #0c20db;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      outline: none;
+  }
+  @media only screen and (max-width: 780px){
+    font-size: 12px;
+    padding: 4px 7px;
+    border-radius: 2px;
+  }
 `
 export default ProductCard;

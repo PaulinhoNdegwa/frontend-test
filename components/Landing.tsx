@@ -28,17 +28,29 @@ function Landing({ hustle }: Props) {
   );
 }
 const LandingContainer = styled.div`
-  /* margin: 20px; */
+  @media only screen and (max-width: 780px){
+    width: 100%;
+  }
 `
 const NavbarDiv = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 5px 10px;
+
+  @media only screen and (max-width: 780px){
+    width: 100%;
+    font-size: 14px;
+  }
 `
 const NavbarLink = styled.a`
   display: inline-block;
   margin: 20px 10px 10px 10px;
+
+  @media only screen and (max-width: 780px){
+    font-size: 14px;
+    margin: 10px;
+  }
 `
 const SearchInput = styled.input`
   width: 80%;
@@ -49,6 +61,13 @@ const SearchInput = styled.input`
   font-size: 17px;
   outline: none;
   padding: 5px 10px;
+
+  @media only screen and (max-width: 780px){
+    width: 70%;
+    font-size: 14px;
+    margin: 5px;
+    padding: 5px;
+  }
 `
 const HustleImages = styled.div`
   width: 100%;
@@ -60,6 +79,10 @@ const HustleBanner = styled.img`
   width: 100%;
   object-fit: cover;
   display: block;
+
+  @media only screen and (max-width: 780px){
+    border-radius: 0;
+  }
 `
 const HustleLogo = styled.img`
   width: 100px;
@@ -70,23 +93,39 @@ const HustleLogo = styled.img`
   left: 46%;
   display: block;
   border: 3px #fff solid;
+
+  @media only screen and (max-width: 780px){
+    left: 37%;
+  }
 `
 const HustleTitle = styled.h4`
   margin-top: 60px;
   font-weight: 600px;
   font-size: 20px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+
+  @media only screen and (max-width: 780px){
+    font-size: 18px;
+  }
 `
 const HustleDescription = styled.p`
   color: #888;
   font-size: 15px;
   width: 70%;
   margin: 10px auto;
-  line-height: 20px
+  line-height: 20px;
+
+  @media only screen and (max-width: 780px){
+    font-size: 15px;
+  }
 `
 const HustleSocials = styled.div`
   text-align: center;
-  color: #888
+  color: #888;
+
+  @media only screen and (max-width: 780px){
+    font-size: 14px;
+  }
 `
 const HustleSocialLink = styled.a`
   text-decoration: underline;

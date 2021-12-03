@@ -23,7 +23,8 @@ const ProductsContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 10px 0;
+  padding: 10px 10px;
   margin: 20px 0;
+  width: 100%;
 `
 export default ProductList;

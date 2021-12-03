@@ -70,7 +70,7 @@ const MainContainer = styled.div`
   margin: 0 auto;
   text-align: center;
 
-  @media only screen and (max-width: 780px){
+  @media only screen and (max-width: 1200px){
     width: 100%;
   }
 `
@@ -80,5 +80,12 @@ const ProductFilters = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   margin: 10px 0;
+
+  @media only screen and (max-width: 1200px){
+    margin: 10px 20px;
+  }
+  @media only screen and (max-width: 800px){
+    margin: 10px;
+  }
 `
 export default Home

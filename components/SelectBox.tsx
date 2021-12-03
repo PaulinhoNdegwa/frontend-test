@@ -7,7 +7,7 @@ interface Props {
 const SelectBox = ({name, values}: Props) => {
     return ( 
         <SelectInput name={name}>
-            <option disabled defaultValue="">{name}</option>
+            <option disabled selected>{name}</option>
             {
                 values.map((value, index) => {
                     return <SelectOption key={index} value={value}>{value}</SelectOption>
@@ -24,6 +24,11 @@ const SelectInput = styled.select`
   outline: none;
   border-radius: 5px;
   border: 1px #ddd solid;
+  font-size: 14px;
+
+  @media only screen and (max-width: 800px){
+    font-size: 13px;
+  }
 `
 const SelectOption = styled.option`
   background: #fff;

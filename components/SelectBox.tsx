@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 interface Props {
     name: string,
     values: string[]
@@ -5,15 +6,27 @@ interface Props {
 
 const SelectBox = ({name, values}: Props) => {
     return ( 
-        <select name={name}>
-            <option disabled value="">{name}</option>
+        <SelectInput name={name}>
+            <option disabled defaultValue="">{name}</option>
             {
                 values.map((value, index) => {
-                    return <option key={index} value={value}>{value}</option>
+                    return <SelectOption key={index} value={value}>{value}</SelectOption>
                 })
             }
-        </select>
+        </SelectInput>
      );
 }
 
+const SelectInput = styled.select`
+  width: 50%;
+  background: #eee;
+  padding: 6px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px #ddd solid;
+`
+const SelectOption = styled.option`
+  background: #fff;
+  padding: 5px;
+`
 export default SelectBox;

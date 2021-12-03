@@ -28,7 +28,7 @@ function Landing({ hustle }: Props) {
   );
 }
 const LandingContainer = styled.div`
-  margin: 20px;
+  /* margin: 20px; */
 `
 const NavbarDiv = styled.div`
   display: flex;

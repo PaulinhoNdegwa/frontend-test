@@ -46,10 +46,10 @@ const Home: NextPage = () => {
             {
               hustle ? <Landing hustle={hustle} /> : null
             }
-            <div>
+            <ProductFilters>
               <SelectBox name="Sort By" values={sortBy} />
               <SelectBox name="Categories" values={categories} />
-            </div>
+            </ProductFilters>
             <ProductList products={products} />
           </div>
         )
@@ -69,6 +69,16 @@ const MainContainer = styled.div`
   width: 1200px;
   margin: 0 auto;
   text-align: center;
+
+  @media only screen and (max-width: 780px){
+    width: 100%;
+  }
 `
 
+const ProductFilters = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px 0;
+`
 export default Home

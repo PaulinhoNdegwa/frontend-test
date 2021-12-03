@@ -1,26 +1,45 @@
-## Frontend Take Home Challenge
+# HustleSasa Front-end Challenge
+#### This is an application built using NextJS to display a list of products for a vendor
 
-<b>Problem</b> HustleSasa needs a Nextjs application to display a list of products for a vendor
+### By [Paul Gichuki](https://paulgichuki.netlify.com/)
+## Description
+This is an application built using VueJS and CSS to display a list of products for a vendor. The project is written Typescript and uses Styled-Components for styling
 
-<a href="https://docs.google.com/presentation/d/1Jb3OL2JcGnXt8bltDzmZ8JN8D5wvryRJ94S5Oky1KEI/edit?usp=sharing">Design Link</a>
+## Screenshots
+![Big Screen](https://github.com/PaulinhoNdegwa/frontend-test/blob/main/screenshots/web.png?raw=true)
+On a big screen
 
-<b>Requirements</b>
+![Mobile Screen](https://github.com/PaulinhoNdegwa/frontend-test/blob/main/screenshots/mobile.png?raw=true)
+On a mobile screen
+## Setup/Installation Requirements
+### Requirements
+1. Node
 
-1. Store information should be loaded from <a href="https://run.mocky.io/v3/5194b007-b9b9-4748-a63f-f5db0ee4cd47">Mock data</a>
-2. Page should be responsive
-3. Keep a history of work through your commits
-
-<b>Nice to haves</b>
-
-1. Unit tests
-2. Styled components
-3. Typescript
-
-<b>Deliverables</b>
-
-1. Link to codebase on Github
-2. Clear documentation on how to get the application running locally on any machine
-
-We respect your time, and we understand that you are already busy. We only expect 4 hours to be spent completing this challenge. If you would like to spend more time working on it, you are free to do so, but please know that if you do not finish, it is not the end of the world. At the end of the day, we want to see the way you tackle problems and that you can write code.
-
-If you have any questions during this process, feel free to ask!
+### Setup Procedure
+* Clone the repository
+```
+    $ git clone https://github.com/PaulinhoNdegwa/frontend-test.git
+```
+* Install dependencies  
+```
+    $ npm install
+```
+* Run the application on hot-reload
+```
+    $ npm run dev
+```
+* Compile and minify for production
+```
+    $ npm run build
+```
+## Known Bugs
+* No known bugs
+## Technologies Used
+* Typescript
+* NextJS
+* Styled Components
+## Support and contact details
+Contact me via ndegwapaul56@gmail.com
+### License
+[MIT](https://github.com/PaulinhoNdegwa/frontend-test/blob/main/license)
+Copyright (c) 2021 Paul Gichuki

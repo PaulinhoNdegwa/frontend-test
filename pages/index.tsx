@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import styled from 'styled-components'
 import styles from '../styles/Home.module.css'
 import axios from 'axios'
 import { Product, Category, SoryBy, Hustle } from '../types'
@@ -9,7 +10,7 @@ import { Product, Category, SoryBy, Hustle } from '../types'
 import ProductList from '../components/ProductList'
 
 import SelectBox from '../components/SelectBox';
-import Landing from './Landing'
+import Landing from '../components/Landing'
 
 const Home: NextPage = () => {
   const [hustle, setHustle] = useState<Hustle>()
@@ -36,8 +37,7 @@ const Home: NextPage = () => {
       })
   }, [])
   return (
-    <div className={styles.container}>
-      <h2>Products Page</h2>
+    <MainContainer>
       {
         loading && !products.length ? (
           <h3>Loading...</h3>
@@ -61,8 +61,14 @@ const Home: NextPage = () => {
         ) : null
       }
 
-    </div>
+    </MainContainer>
   )
 }
+
+const MainContainer = styled.div`
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+`
 
 export default Home

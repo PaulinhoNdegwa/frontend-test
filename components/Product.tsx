@@ -4,7 +4,7 @@ interface Props {
     product: Product
 }
 
-const Product = ({ product }: Props) => {
+const ProductCard = ({ product }: Props) => {
     return (
         <div>
             <img src={product.product_image} alt={product.name} height="300px" width="400px" />
@@ -18,4 +18,4 @@ const Product = ({ product }: Props) => {
     );
 }
 
-export default Product;
+export default ProductCard;
